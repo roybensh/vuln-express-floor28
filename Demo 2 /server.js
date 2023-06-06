@@ -1,3 +1,4 @@
+Object.freeze(Object.prototype);
 var express = require('express');
 var app = express();
 

@@ -1,5 +1,4 @@
-﻿**Lab 1 (15 min)**![horizontal line](./media/image13.png){width="6.5in"
-height="6.944444444444445e-2in"}
+﻿**Lab 1 (15 min)**
 
 In this lab you will set up and configure your personal JFrog Platform
 environment.
@@ -14,7 +13,7 @@ personal environment with your personal credentials and observe two
 docker repositories configured for you. You will also be able to browse
 demo data and findings in the platform
 
-**[Step by step instructions]{.underline}**
+**Step by step instructions**
 
 1.  Open your terminal & download the zip file
 
@@ -32,7 +31,7 @@ demo data and findings in the platform
     > ![](./media/image6.png){width="6.5in"
     > height="5.055555555555555in"}
 
-> *[Phase #2]{.underline}*
+> *Phase #2*
 
 -   Populate hostname which you should use later on. Best practice is
     > "firstname-lastname" i.e. "david-cohen"
@@ -43,18 +42,18 @@ demo data and findings in the platform
 
 > ![](./media/image7.png){width="6.5in" height="3.25in"}\
 > \
-> *[Phase #3:]{.underline}*
+> *Phase #3:*
 >
 > Your environment is being prepared.
 >
 > In the next screen, please select the password to be used (or API
 > token in case of SSO)
 
-5.  Return to your terminal and run\
+5.  Return to your terminal and run
     > bash guided-trial/linux_guided_trial.sh\
     > *There is also a windows version in the folder if needed.*
 
-6.  From the menu, select option #1:\
+6.  From the menu, select option #1:
     > Configure the instance new or existing\
     > ![](./media/image5.png){width="6.5in"
     > height="1.9166666666666667in"}\
@@ -92,7 +91,7 @@ demo data and findings in the platform
     > Those are already pre-populated with Docker and Terraform data &
     > can be browsed during or after the workshop.
 
-> **[Congratulations! You have completed Lab 1]{.underline}**
+> **Congratulations! You have completed Lab 1**
 
 **Lab 2 (30 min)**![horizontal line](./media/image13.png){width="6.5in"
 height="6.944444444444445e-2in"}

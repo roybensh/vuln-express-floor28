@@ -43,9 +43,9 @@ app.get('/', function(req, res) {
 app.get("/uploadPath", (req, res) => {
   const usrUrl = req.query.myUrl
   console.log(usrUrl)
-  //let { url, path } = parseUrl(usrUrl)
-  let url = "https://raw.githubusercontent.com"
-  let path = "/jfrog/project-examples/master/README"
+  let { url, path } = parseUrl(usrUrl)
+  //let url = "https://raw.githubusercontent.com"
+  //let path = "/jfrog/project-examples/master/README"
   console.log(url)
   console.log(path)
   const {

@@ -18,18 +18,17 @@ demo data and findings in the platform
 1.  Open your terminal & download the zip file
 
 > curl -sLO
-> [https://releases.jfrog.io/artifactory/website/security/guided-trial.zip]
+> https://releases.jfrog.io/artifactory/website/security/guided-trial.zip
 
 2.  Unzip it to your selected working folder
 
 3.  Browse to
-    > [jfrog.com/start-free/security]
+    > https://jfrog.com/start-free/security
 
 4.  Complete the registration process
     > \
     > *[Phase #1:]*\
-    > ![](./media/image6.png){width="6.5in"
-    > height="5.055555555555555in"}
+    > ![](./media/image6.png)
 
 > *Phase #2*
 
@@ -40,8 +39,8 @@ demo data and findings in the platform
 
 -   Select AWS & "EU West" region (Ireland)
 
-> ![](./media/image7.png){width="6.5in" height="3.25in"}\
-> \
+> ![](./media/image7.png)
+
 > *Phase #3:*
 >
 > Your environment is being prepared.
@@ -55,9 +54,8 @@ demo data and findings in the platform
 
 6.  From the menu, select option #1:
     > Configure the instance new or existing\
-    > ![](./media/image5.png){width="6.5in"
-    > height="1.9166666666666667in"}\
-    > \
+    > ![](./media/image5.png)
+    
     > And then option #2\
     > I already have an instance\
     > ![](./media/image11.png){width="6.5in"

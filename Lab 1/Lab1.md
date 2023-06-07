@@ -25,7 +25,7 @@ demo data and findings in the platform
 3.  Browse to
     > [[jfrog.com/start-free/security]{.underline}](https://jfrog.com/start-free/security/)
 
-4.  Complete the registration process:\
+4.  Complete the registration process
     > \
     > *[Phase #1:]{.underline}*\
     > ![](./media/image6.png){width="6.5in"
@@ -67,13 +67,13 @@ demo data and findings in the platform
     > token as needed\
     > ![](./media/image4.png){width="6.5in"
     > height="2.1666666666666665in"}\
-    > Note the script's outputs as it configures your environment:\
+    > Note the script's outputs as it configures your environment
     > ![](./media/image8.png){width="6.5in"
     > height="1.9583333333333333in"}
 
 7.  Return to your browser and open your server at https://\<your
     > instance name\>.jfrog.io/ui/admin/repositories/remote and see
-    > there is a "docker-hub-remote-repo" remote repository created:\
+    > there is a "docker-hub-remote-repo" remote repository created
     > ![](./media/image10.png){width="6.5in"
     > height="2.986111111111111in"}\
     > Your remote repository will be used in the next lab to pull a
@@ -81,7 +81,7 @@ demo data and findings in the platform
 
 8.  Now, switch to the 'local' tab using the UI or https://\<your
     > instance name\>.jfrog.io/ui/admin/repositories/local to see the
-    > "local-docker-repo" local repository created:\
+    > "local-docker-repo" local repository created
     > ![](./media/image9.png){width="6.5in"
     > height="2.986111111111111in"}\
     > Your local repository will be used in the next lab to push a
@@ -107,7 +107,7 @@ use the Security issues page and extract relevant value from it
 ***Phase #1 - Pulling a docker image:*]{.underline}
 
 1.  Open the terminal used in Lab 1, or, in case you've closed it, open
-    > a new one and run:\
+    > a new one and run
     > bash guided-trial/linux_guided_trial.sh
 
 2.  From the menu, select option #3:

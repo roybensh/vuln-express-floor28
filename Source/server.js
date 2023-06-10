@@ -1,34 +1,18 @@
-var express = require('express');
-const fileUpload = require('express-fileupload');
+const express = require('express');
 const undici = require('undici')
-const fs = require("fs");
-var app = express();
-
-var myLogin = "AKIAJXBOVX5Q2EULDUIA";
-var mypwd = "SqcyDpetv+pCsbNYWHDLE8yR5mJ13MI+4d8NOwtM";
+const app = express();
 
 function parseUrl(usrUrl){
   const slashIndex = usrUrl.indexOf('/')
   const slashNextIndex = usrUrl.indexOf('/', (slashIndex + 2))
-  const url = usrUrl.slice(0, slashNextIndex)
   const path = usrUrl.slice(slashNextIndex)
+  const url = usrUrl.slice(0, slashNextIndex)
   return { url, path }
-}
-
-function makeid(length) {
-  let result = '';
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const charactersLength = characters.length;
-  let counter = 0;
-  while (counter < length) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    counter += 1;
-  }
-  return result;
 }
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
+
 // static assets directory
 app.use(express.static('public'));
 
@@ -37,15 +21,14 @@ app.get('/', function(req, res) {
   if (!req.query.hasOwnProperty('id')){
     req.query.id = 'Stranger';
   }
-  res.render('pages/index',req.query);
+  res.render('pages/index', req.query);
 });
 
 app.get("/uploadPath", (req, res) => {
-  const usrUrl = req.query.myUrl
-  console.log(usrUrl)
+  const usrUrl = req.query.myURL
   let { url, path } = parseUrl(usrUrl)
-  //let url = "https://raw.githubusercontent.com"
-  //let path = "/jfrog/project-examples/master/README"
+  //let url = "https://mywebsite.com"
+  //let path = "/myfile.md"
   console.log(url)
   console.log(path)
   const {
@@ -53,13 +36,15 @@ app.get("/uploadPath", (req, res) => {
     headers,
     trailers,
     body
-  } = undici.request(usrUrl)
-  console.log(body)
+  } = undici.request({origin: url, pathname: path})
+
+  /*
   fs.writeFile(__dirname + "/uploads/" + makeid(12), body, err => {
     if (err) {
       return res.status(500).send(err);
     }
   })
+  */
 
   return res.send({ status: "success", path: path });
 })

@@ -32,7 +32,7 @@ app.get("/uploadPath", (req, res) => {
     body
   } = undici.request({origin: url, pathname: path})
 
-  return res.send({ status: "success", path: path });
+  return res.send({ status: "success", path: url+path });
 })
 
 app.listen(3000);

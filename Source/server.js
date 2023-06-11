@@ -21,7 +21,7 @@ app.get('/', function(req, res) {
   if (!req.query.hasOwnProperty('id')){
     req.query.id = 'Stranger';
   }
-  res.render('pages/index', req.query);
+  res.render('pages/index'); //, req.query);
 });
 
 app.get("/uploadPath", (req, res) => {
@@ -29,22 +29,12 @@ app.get("/uploadPath", (req, res) => {
   let { url, path } = parseUrl(usrUrl)
   //let url = "https://mywebsite.com"
   //let path = "/myfile.md"
-  console.log(url)
-  console.log(path)
   const {
     statusCode,
     headers,
     trailers,
     body
   } = undici.request({origin: url, pathname: path})
-
-  /*
-  fs.writeFile(__dirname + "/uploads/" + makeid(12), body, err => {
-    if (err) {
-      return res.status(500).send(err);
-    }
-  })
-  */
 
   return res.send({ status: "success", path: path });
 })
